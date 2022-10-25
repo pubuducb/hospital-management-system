@@ -1,0 +1,26 @@
+
+	Ishara
+	1.Spellings(patinno,adressno)
+	2.Results in the same page
+	3.Main page
+		-Tab system
+		-select view type
+	4.Update patient when updating person,and allergy
+	5.About Us
+	6.Hospital Information
+	
+	
+	Pubudu
+	Staff Tab
+		1.Requested Medical Report Information	//Pubudu
+		2.Ward Managing,Registering Patient(Edit to discharge)		//Pubudu
+		3.Treats On	//Pubudu
+		4.Managing resources and medicine//Pubudu
+		
+		
+
+	-Consider
+
+		-Give Access to Doctors and Admins
+		
+		

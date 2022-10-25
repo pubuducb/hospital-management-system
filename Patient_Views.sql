@@ -1,0 +1,91 @@
+/*
+This SQL script contains views,stored procedures and triggers 
+which is accessd by a PATEINT.
+*/
+
+USE HOSPITAL_MANAGEMENT_SYSTEM;
+ 
+#this view shows the general information of a PATIENT when id number is input.
+CREATE VIEW PATIENTINFO
+AS
+SELECT PERSON.*,PATIENT.BGROUP,PATIENT.PATIONNO  
+FROM PERSON,PATIENT
+WHERE PERSON.NID=PATIENT.NID;
+
+#this stored procedure displays the general information corresponding to a PATIENT NID
+DELIMITER //
+CREATE PROCEDURE SHOWPATIENTINFO(
+IN INPUTNID CHAR(10)
+)
+BEGIN
+
+SELECT *
+FROM PATIENTINFO
+WHERE INPUTNID = NID;
+
+
+END //
+
+#demo-corresponding data record for a patient
+CALL SHOWPATIENTINFO('76485468v');
+
+#this view shows the general information of a PATIENT.
+CREATE VIEW PATIENTINFO
+AS
+SELECT PERSON.*,PATIENT.BGROUP,PATIENT.PATIONNO  
+FROM PERSON,PATIENT
+WHERE PERSON.NID=PATIENT.NID;
+
+#this stored procedure displays the medical report details corresponding to a PATIENT NID
+DELIMITER //
+CREATE PROCEDURE SHOWPATIENTMREPORT(
+IN INPUTNID CHAR(10)
+)
+
+BEGIN
+
+SELECT * 
+FROM MEDICALREPORT
+WHERE REPORTNO=(
+	SELECT REPORTNO
+	FROM ISSUES
+	WHERE PATIONNO = (
+		SELECT PATIONNO
+		FROM PATIENT
+		WHERE NID=INPUTNID
+	)
+);
+
+END //
+
+#EXAMPLE
+CALL SHOWPATIENTMREPORT('76485468v');
+
+#this stored procedure displays the details of a PATIENT corresponding to a PATIENT NID
+DELIMITER //
+CREATE PROCEDURE SHOWPATIENTALLERGY(
+IN INPUTNID CHAR(10)
+)
+
+BEGIN
+
+SELECT * 
+FROM PATIENTALLERGY
+WHERE PATIONNO=(
+	SELECT PATIONNO
+	FROM PATIENT
+	WHERE NID = INPUTNID
+);
+
+END //
+
+#EXAMPLE
+CALL SHOWPATIENTALLERGY('68759045v');
+
+
+#This trigger executes when a new entry for person is added.
+
+
+
+
+

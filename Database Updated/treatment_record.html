@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<style>
+
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+</style>
+
+<html>
+
+<head>
+    <title>Treatment Record HTML</title>
+</head>
+
+<body bgcolor="#f1f1f1"  leftmargin="30">
+    <form action="treatment_record.php" method="GET">
+        <table>
+            <tr>
+                <th>Patient NID:</th>
+                <td>
+                    <input type="text" name="PatientNID">
+                </td>
+            </tr>
+            <tr>
+                <th>Doctor NID:</th>
+                <td>
+                    <input type="text" name="DoctorNID">
+                </td>
+            </tr>
+            <tr>
+                <th>Treatment Date:</th>
+                <td>
+                    <input type="date" name="Date">
+                </td>
+            </tr>
+            <tr>
+                <th>Illness:</th>
+                <td>
+                    <input type="text" name="Illness">
+                </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Register" class="registerbtn"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

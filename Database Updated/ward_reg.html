@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<style>
+
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+</style>
+
+<html>
+
+<head>
+    <title>Patint Registration HTML</title>
+</head>
+
+<body bgcolor="#f1f1f1"  leftmargin="30">
+    <form action="ward_reg.php" method="GET">
+        <table>
+            <tr>
+                <th>Patient NID:</th>
+                <td>
+                    <input type="text" name="NID">
+                </td>
+            </tr>
+            <tr>
+                <th>Ward No:</th>
+                <td>
+                    <input type="text" name="WardNo">
+                </td>
+            </tr>
+            <tr>
+                <th>Registered Date:</th>
+                <td>
+					<input type="date" name="Date">
+                </td>
+            </tr>
+            <tr>
+                <th>Illness:</th>
+                <td>
+                    <input type="text" name="Illness">
+                </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Register" class="registerbtn"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

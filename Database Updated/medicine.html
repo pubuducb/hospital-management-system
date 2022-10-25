@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<style>
+
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+</style>
+
+<html>
+
+<head>
+    <title>Medicine HTML</title>
+</head>
+
+<body bgcolor="#f1f1f1"  leftmargin="30">
+    <form action="medicine.php" method="GET">
+        <table>
+            <tr>
+                <th>Scientific Name:</th>
+                <td>
+                    <input type="text" name="SName">
+                </td>
+            </tr>
+            <tr>
+                <th>Manufacturer:</th>
+                <td>
+                    <input type="text" name="Man">
+                </td>
+            </tr>
+            <tr>
+                <th>Number of Units:</th>
+                <td>
+                    <input type="text" name="Units">
+                </td>
+            </tr>
+            <tr>
+                <th>Commercial Name:</th>
+                <td>
+                    <input type="text" name="CName">
+                </td>
+            </tr>
+            <tr>
+                <th>Physical State:</th>
+                <td>
+                    <input type="text" name="State">
+                </td>
+            </tr>
+            <tr>
+                <th>Unit Price:</th>
+                <td>
+                    <input type="text" name="Price">
+                </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Add medicine to the stock" class="registerbtn"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
